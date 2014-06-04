@@ -534,8 +534,7 @@ class camelCase(object):
      *
      * @return %(type)s
      */
-    public function get%(normalizedName)s()
-    {
+    public function get%(normalizedName)s() {
         return $this->%(name)s;
     }
     """
@@ -548,8 +547,7 @@ class camelCase(object):
      *
      * @return self
      */
-    %(visibility)s function %(visibilityPrefix)sset%(normalizedName)s(%(typeHint)s $%(param)s)
-    {
+    %(visibility)s function %(visibilityPrefix)sset%(normalizedName)s(%(typeHint)s $%(param)s) {
         $this->%(name)s = $%(param)s;
 
         return $this;
@@ -566,8 +564,7 @@ class camelCaseFluent(camelCase):
      *
      * @return self
      */
-    %(visibility)s function %(visibilityPrefix)sset%(normalizedName)s(%(typeHint)s $%(param)s)
-    {
+    %(visibility)s function %(visibilityPrefix)sset%(normalizedName)s(%(typeHint)s $%(param)s) {
         $this->%(name)s = $%(param)s;
 
         return $this;
@@ -583,8 +580,7 @@ class snakeCase(object):
      *
      * @return %(type)s
      */
-    public function get_%(normalizedName)s()
-    {
+    public function get_%(normalizedName)s() {
         return $this->%(name)s;
     }
 """
@@ -594,8 +590,7 @@ class snakeCase(object):
      *
      * @param %(type)s $%(name)s the %(name)s
      */
-    %(visibility)s function %(visibilityPrefix)sset_%(normalizedName)s(%(typeHint)s $%(param)s)
-    {
+    %(visibility)s function %(visibilityPrefix)sset_%(normalizedName)s(%(typeHint)s $%(param)s) {
         $this->%(name)s = $%(param)s;
     }
 """
@@ -612,8 +607,7 @@ class snakeCaseFluent(snakeCase):
      *
      * @return self
      */
-    %(visibility)s function %(visibilityPrefix)sset_%(normalizedName)s(%(typeHint)s $%(param)s)
-    {
+    %(visibility)s function %(visibilityPrefix)sset_%(normalizedName)s(%(typeHint)s $%(param)s) {
         $this->%(name)s = $%(param)s;
 
         return $this;
